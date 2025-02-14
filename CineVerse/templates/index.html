@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse</title>
+    <style>
+        body { text-align: center; background: #121212; color: white; }
+        .btn { padding: 15px 30px; font-size: 18px; cursor: pointer; margin: 10px; border: none; }
+        .public-btn { background: #ff4500; color: white; }
+        .private-btn { background: #1e90ff; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CineVerse</h1>
+    <p>Watch movies with friends in sync!</p>
+    <button class="btn public-btn" onclick="createRoom('public')">Create Public Watch Party</button>
+    <button class="btn private-btn" onclick="createRoom('private')">Private Couple Mode</button>
+
+    <script>
+        function createRoom(mode) {
+            window.location.href = `/create-room?mode=${mode}`;
+        }
+    </script>
+</body>
+</html>
