@@ -1,0 +1,16 @@
+{
+    "name": "cineverse",
+    "version": "1.0.0",
+    "description": "CineVerse - A professional video meeting platform similar to Zoom and Google Meet",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "cineverse": "file:",
+        "express": "^4.17.3",
+        "peer": "^0.6.1",
+        "socket.io": "^4.5.1",
+        "uuid": "^8.3.2"
+    }
+}

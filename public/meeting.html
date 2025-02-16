@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CineVerse - Meeting</title>
+    <link rel="stylesheet" href="meeting.css">
+</head>
+<body>
+<div class="meeting-container">
+    <div class="video-area">
+        <div id="local-video"></div>
+        <div id="remote-videos">
+            <video id="remote-video" autoplay playsinline></video>
+        </div>
+    </div>
+    <div class="controls-area">
+        <div class="controls-buttons">
+            <button id="mic-button" class="control-btn" title="Mute/Unmute">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button id="video-button" class="control-btn" title="Start/Stop Video">
+                <i class="fas fa-video"></i>
+            </button>
+            <button id="screen-share-button" class="control-btn" title="Share Screen">
+                <i class="fas fa-desktop"></i>
+            </button>
+            <button id="leave-button" class="control-btn danger" title="Leave Meeting">
+                <i class="fas fa-phone-slash"></i>
+            </button>
+        </div>
+        <div class="chat-area card">
+            <div class="chat-header">
+                <h3>Chat</h3>
+                <button id="minimize-chat" class="icon-btn">
+                    <i class="fas fa-window-minimize"></i>
+                </button>
+            </div>
+            <div class="chat-window">
+                <ul id="messages"></ul>
+            </div>
+            <div class="chat-input">
+                <input id="message-input" type="text" placeholder="Type your message...">
+                <button id="send-button" class="primary-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="meeting.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> </body>
+</html>
